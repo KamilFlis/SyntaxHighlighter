@@ -4,7 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
-import Box from '@mui/material/Box';
+import Grid from "@mui/material/Grid";
 
 const javaKeywords = [
 	"abstract", "assert", "boolean", "break", "byte", "case", "catch", "char", "class", "const", "continue", "default", "do",
@@ -53,39 +53,43 @@ export default function Main() {
 	
 	return (
         <>
-			<Box sx={{ display: 'flex', flexDirection: 'column' }}>
-				<FormControl sx={{ m: 1, maxWidth: '15%' }}>
-					<InputLabel id="demo-simple-select-autowidth-label">Programming language</InputLabel>
-					<Select
-						labelId="demo-simple-select-autowidth-label"
-						id="demo-simple-select-autowidth"
-						value={language}
-						onChange={handleSetLanguage}
-						autoWidth
-						label="Programming language"
-					>
-						<MenuItem value={"Java"}>Java</MenuItem>
-						<MenuItem value={"JavaScript"}>JavaScript</MenuItem>
-						<MenuItem value={"Python"}>Python</MenuItem>
-					</Select>
-				</FormControl>
-
-				<TextareaAutosize					
-					style={{ width: '98%', margin: '1em', backgroundColor: 'rgba(43,43,43,255)', color: 'white' }}
-					onChange={e => setText(e.currentTarget.value)}
-				/>
-
-				<div style={{whiteSpace: 'pre-wrap', margin: "1em"}}>{
-						text.split(" ").map(word => {
-							if(keywords.includes(word)) {
-								return <span style={{color: "red"}}> {word}</span>;
-							} else {
-								return <span> {word}</span>;
-							}
-						})
-					}
-				</div>
-			</Box>
+			<Grid container spacing={2}>
+				<Grid item xs={12}>
+					<FormControl sx={{ m: 1, minWidth: '15%' }}>
+						<InputLabel id="demo-simple-select-autowidth-label">Programming language</InputLabel>
+						<Select
+							labelId="demo-simple-select-autowidth-label"
+							id="demo-simple-select-autowidth"
+							value={language}
+							onChange={handleSetLanguage}
+							autoWidth
+							label="Programming language"
+						>
+							<MenuItem value={"Java"}>Java</MenuItem>
+							<MenuItem value={"JavaScript"}>JavaScript</MenuItem>
+							<MenuItem value={"Python"}>Python</MenuItem>
+						</Select>
+					</FormControl>
+				</Grid>
+				<Grid item xs={6}>
+					<TextareaAutosize					
+						style={{ width: '98%', resize: "none", height: '600px', margin: "1em", backgroundColor: "rgba(43,43,43,255)", color: "white" }}
+						onChange={e => setText(e.currentTarget.value)}
+					/>
+				</Grid>
+				<Grid item xs={6}>
+					<div style={{whiteSpace: 'pre-wrap', margin: "1em", backgroundColor: "rgba(43,43,43,255)", height: '600px'}}>{
+							text.split(" ").map(word => {
+								if(keywords.includes(word)) {
+									return <span style={{color: "red"}}> {word}</span>;
+								} else {
+									return <span style={{color: "white"}}> {word}</span>;
+								}
+							})
+						}
+					</div>
+				</Grid>
+			</Grid>
         </>
     );
 }
