@@ -1,0 +1,9 @@
+{
+    "instructions": [
+        "await", "async", "else", "import", "pass", "break", "except", "in", "raise", "finally", "is", "and", "continue", "for", "lambda", "try", "as", "from", "assert", "del", "not",
+        "with", "elif", "if", "or", "yield"
+    ],
+    "modifiers": ["nonlocal", "global"],
+    "types": ["False", "None", "True"],
+    "classFunctions": ["class", "return", "def"]
+}

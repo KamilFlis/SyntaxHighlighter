@@ -1,0 +1,9 @@
+{
+    "instructions": [
+        "await", "async", "break", "case", "catch", "continue", "debugger", "default", "delete", "do", "else", "export", "finally", "for", "if", "import", "in", "switch", "throw", 
+        "try", "typeof", "while", "with", "yield"
+    ],
+    "modifiers": ["const", "let", "private", "protected", "public", "static", "var"],
+    "types": ["enum", "void", "false", "null", "true"],
+    "classFunctions": ["class", "extends", "function", "implements", "instanceof", "interface", "new", "package", "return", "super", "this"]
+}

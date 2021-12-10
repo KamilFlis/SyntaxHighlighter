@@ -1,0 +1,6 @@
+{
+    "instructions": ["break", "case", "continue", "default", "do", "sizeof", "switch", "while", "else", "for", "goto", "if"],
+    "modifiers": ["const", "static", "typedef", "volatile", "register", "unsigned", "signed"],
+    "types": ["auto", "char", "int", "long", "short", "void", "double", "enum", "float"],
+    "classFunctions": ["return", "struct", "union"] 
+}

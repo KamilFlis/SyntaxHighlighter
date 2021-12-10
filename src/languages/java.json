@@ -1,0 +1,9 @@
+{
+    "instructions": [
+        "assert", "break", "case", "catch", "continue", "default", "do", "else", "finally", "for", "goto", "if", "import", "native",
+        "switch", "throw", "throws", "try", "while"
+    ],
+    "modifiers": ["abstract", "const", "final", "private", "protected", "public", "static", "strictfp", "synchronized", "transient", "volatile"],
+    "types": ["boolean", "byte", "char", "double", "enum", "float", "int", "long", "short", "String", "void", "false", "true"],
+    "classFunctions": ["class", "extends", "implements", "instanceof", "interface", "new", "package", "return", "super", "this"]
+}

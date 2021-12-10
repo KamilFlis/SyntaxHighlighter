@@ -1,10 +1,10 @@
-import Main from './Main'
+import CodeEditor from './CodeEditor'
 import './App.css';
 
 export default function App() {
 	return (
 		<>
-			<Main />
+			<CodeEditor />
     	</>
   	);
 }
